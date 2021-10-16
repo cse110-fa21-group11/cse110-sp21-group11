@@ -12,6 +12,7 @@ Instead of our tools consisting of various cooking equipment, we will instead be
 - Communication is key!
 - Team contribution from everyone, but make sure that not all the work falls onto one person or a few select team members. Remember, bus factor shouldn't be low.
 - Don't feel afraid to ask for help
+- Respect each other's point of views and commitment.
 - Psychological safety: Mistakes are normal. If a team member makes a mistake, don't attack them for it. Reassure them that it's okay and ask for help.
 
 ## **Members** ##
@@ -21,3 +22,9 @@ Instead of our tools consisting of various cooking equipment, we will instead be
 [Github page](https://github.com/yekatya)
 
 I am a fourth year undergraduate student at UCSD majoring in applied mathematics and computer science. My professional and academic interests include software engineering and web development. I went to a charter fine arts school in high school called the Orange County School of the Arts where I was accepted into the visual arts conservatory, so my biggest hobby is art. I love to experiment with all types of mediums including digital media, watercolor, oil painting, and plein-air painting to name a few, but my absolute favorite is oil painting since it is the most forgiving! Otherwise, I love baking, reading, trying out different workouts, and cats. 
+
+### **Tina Wang** ###
+
+[Github page](https://github.com/t6wang)
+
+I am a fourth year undergraduate student at UCSD studying mathematics-computer science and management science. My professional interest is software engineering. During my free time, I am passionate about watching team sports and playing lacrosse. I also enjoy exploring new music and everything outdoor such as going on new hikes as well as exploring new food places and trying out new drink recipes!
