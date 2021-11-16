@@ -1,0 +1,25 @@
+{
+  "name": "cse110-sp21-group11",
+  "version": "1.0.0",
+  "description": "[Team Page](https://github.com/cse110-fa21-group11/cse110-sp21-group11/blob/main/admin/team.md)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse110-fa21-group11/cse110-sp21-group11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse110-fa21-group11/cse110-sp21-group11/issues"
+  },
+  "homepage": "https://github.com/cse110-fa21-group11/cse110-sp21-group11#readme"
+}
