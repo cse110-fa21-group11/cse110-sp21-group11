@@ -9,6 +9,10 @@ const apiKeys = ["4d388ae5990f41f195ca41c0f0a1a5bb", "199c50e0bf5a46d0b9b937e10d
 //router
 const router = {};
 
+
+//carousel buttons
+//var buttons = [document.querySelector('.forward'), document.querySelector('.back')];
+
 window.addEventListener('DOMContentLoaded', init);
 
 async function init() {

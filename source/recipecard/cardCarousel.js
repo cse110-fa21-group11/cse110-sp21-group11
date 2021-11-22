@@ -46,4 +46,11 @@ class CardCarousel extends HTMLElement {
     }
 }
 
+// add prev and next buttons and their event listeners
+const prevButton = document.querySelector('.back');
+const nextButton = document.querySelector('.forward');
+
+prevButton.addEventListener('click', CardCarousel().prevCards());
+nextButton.addEventListener('click', CardCarousel().nextCards());
+
 customElements.define('card-carousel', CardCarousel);
