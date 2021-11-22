@@ -35,8 +35,8 @@ async function init() {
     //addRecipesToPage();
 
     //Manually add two different carousels
-    await addCarouselsToPage("pasta", 3);
-    await addCarouselsToPage("burger", 3); 
+    await addCarouselsToPage("pasta", 6);
+    await addCarouselsToPage("burger", 6); 
 
     /*await getRecipeList("pasta", 3).then((response) =>{
       console.log(response);
@@ -54,7 +54,7 @@ in the following two functions to a different value*/
 //query = search term i.e. "pasta", numResults = number of recipes to return from search results
 async function queryApi(query, numResults){
 
-  const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + apiKeys[1] + '&query=' + query + '&number=' + numResults);
+  const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + apiKeys[0] + '&query=' + query + '&number=' + numResults);
   
   return response.json();
   
@@ -64,7 +64,7 @@ async function queryApi(query, numResults){
 //Returns json data of recipe with id specified in parameter 'id'
 async function getRecipe(id){
   //Query API by specific recipe id
-  const response = await fetch('https://api.spoonacular.com/recipes/'+ id +'/information?apiKey=' + apiKeys[1]);
+  const response = await fetch('https://api.spoonacular.com/recipes/'+ id +'/information?apiKey=' + apiKeys[0]);
   
   //Return data in json format
   return response.json();
