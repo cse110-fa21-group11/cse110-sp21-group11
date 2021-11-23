@@ -7,16 +7,6 @@ class CardCarousel extends HTMLElement {
     }
 
 
-    // paramter is in an array of recipe cards
-    createCardCarousel(recipeCards) {
-        for (let i = 0; i < recipeCards.length; i++) {
-            if (i > 2) {
-                recipeCards[i].setAttribute('style', 'display: none');
-            }
-            this.shadowRoot.append(recipeCards[i]);
-        }
-    }
-
     /*
     * This function will be called in an event listener when the right button is clicked.
     * The next 3 recipe cards will be shown.
@@ -44,13 +34,51 @@ class CardCarousel extends HTMLElement {
             }
         }
     }
+
+
+    // paramter is in an array of recipe cards
+    createCardCarousel(recipeCards) {
+
+        //Test
+        //this.shadowRoot.innerHTML += '<button class="back">&#10094</button>';
+
+        /*var backButton = document.createElement('a');
+        backButton.classList.add('back');
+        backButton.innerHTML = '&#10094';
+        //backButton.setAttribute('style', 'display: none');
+        backButton.addEventListener('click', this.prevCards());
+        //backButton.onclick = this.prevCards();
+        this.shadowRoot.appendChild(backButton);*/
+
+        for (let i = 0; i < recipeCards.length; i++) {
+            if (i > 2) {
+                recipeCards[i].setAttribute('style', 'display: none');
+            }
+            this.shadowRoot.append(recipeCards[i]);
+        }
+
+        //Test
+        //this.shadowRoot.innerHTML += '<button class="forward">&#10095</button> ';
+
+        /*var forwardButton = document.createElement('a');
+        forwardButton.classList.add('forward');
+        forwardButton.innerHTML = '&#10095';
+        //forwardButton.setAttribute('style', 'display: none');
+        //forwardButton.addEventListener('click', this.nextCards());
+        forwardButton.addEventListener('click', console.log("CLICKED FORWARD"));
+        //forwardButton.onclick = this.nextCards();
+        this.shadowRoot.appendChild(forwardButton);*/
+
+    }
+
+    
 }
 
 // add prev and next buttons and their event listeners
-const prevButton = document.querySelector('.back');
+/*const prevButton = document.querySelector('.back');
 const nextButton = document.querySelector('.forward');
 
 prevButton.addEventListener('click', CardCarousel().prevCards());
-nextButton.addEventListener('click', CardCarousel().nextCards());
+nextButton.addEventListener('click', CardCarousel().nextCards());*/
 
 customElements.define('card-carousel', CardCarousel);
