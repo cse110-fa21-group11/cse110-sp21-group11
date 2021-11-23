@@ -4,7 +4,7 @@ const recipeData = {};  // used to access the recipe data from Spoonacular
 
 //We're using the free Spoonacular api plan; each key in this array can do 150 requests per day. 
 //Pls make a free Spoonacular api account and add your key to this array!
-const apiKeys = ["4d388ae5990f41f195ca41c0f0a1a5bb", "199c50e0bf5a46d0b9b937e10db957c5", "c0444bbab49f48e1a3b5afa0054f3f67"];
+const apiKeys = ["4d388ae5990f41f195ca41c0f0a1a5bb", "199c50e0bf5a46d0b9b937e10db957c5", "c0444bbab49f48e1a3b5afa0054f3f67", "a29de94d61a64814b01ebe1ae8f6fb82", "9de1898ae94b46298bf1b5eb0a3151bb"];
 
 //router
 const router = {};
@@ -26,25 +26,24 @@ async function init() {
       return;
     }
     */
+   /*
    let params = 'query=pasta&maxFat=25&nuber=2';
    await fetchParams(params).then(function(res){
     const fetchedRecipes = res.results;
     for (let i = 0; i < fetchedRecipes.length; i++) {
       recipeData[fetchedRecipes[i].title] = fetchedRecipes[i].id;
     }
-   })
+   })*/
 
     //createRecipeCards();
     //bindShowMore();
     //addRecipesToPage();
 
     //Manually add two different carousels
-    await addCarouselsToPage("pasta", 6);
-    await addCarouselsToPage("burger", 6); 
+    (await addCarouselsToPage("pasta", 4));
+    //await addCarouselsToPage("burger", 3); 
 
-    /*await getRecipeList("pasta", 3).then((response) =>{
-      console.log(response);
-    });*/
+
 
     
 
@@ -58,7 +57,7 @@ in the following two functions to a different value*/
 //query = search term i.e. "pasta", numResults = number of recipes to return from search results
 async function queryApi(query, numResults){
 
-  const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + apiKeys[0] + '&query=' + query + '&number=' + numResults);
+  const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + apiKeys[4] + '&query=' + query + '&number=' + numResults);
   
   return response.json();
   
@@ -68,7 +67,7 @@ async function queryApi(query, numResults){
 //Returns json data of recipe with id specified in parameter 'id'
 async function getRecipe(id){
   //Query API by specific recipe id
-  const response = await fetch('https://api.spoonacular.com/recipes/'+ id +'/information?apiKey=' + apiKeys[0]);
+  const response = await fetch('https://api.spoonacular.com/recipes/'+ id +'/information?apiKey=' + apiKeys[4]);
   
   //Return data in json format
   return response.json();
@@ -161,10 +160,21 @@ async function addCarouselsToPage(searchQuery, numRecipes){
 
   }
 
+
   //Inserts all the recipe cards in carouselCards into the carousel
   newCarousel.createCardCarousel(carouselCards);
 
+
+
+
+
+
+
   //Appends the newly created and populated carousel to the class recipes-wrapper in the document
   document.querySelector('.recipes-wrapper').appendChild(newCarousel);
+
+  //Return a reference to the carousel
+  return newCarousel;
+
 
 }
