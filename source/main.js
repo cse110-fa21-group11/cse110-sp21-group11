@@ -10,9 +10,6 @@ const apiKeys = ["4d388ae5990f41f195ca41c0f0a1a5bb", "199c50e0bf5a46d0b9b937e10d
 const router = {};
 
 
-//carousel buttons
-//var buttons = [document.querySelector('.forward'), document.querySelector('.back')];
-
 window.addEventListener('DOMContentLoaded', init);
 
 async function init() {
@@ -35,17 +32,10 @@ async function init() {
     }
    })*/
 
-    //createRecipeCards();
-    //bindShowMore();
-    //addRecipesToPage();
-
     //Manually add two different carousels
     (await addCarouselsToPage("pasta", 4));
-    //await addCarouselsToPage("burger", 3); 
-
-
-
-    
+    await addCarouselsToPage("burger", 12); 
+    await addCarouselsToPage("burger", 12);
 
 }
 
@@ -57,7 +47,7 @@ in the following two functions to a different value*/
 //query = search term i.e. "pasta", numResults = number of recipes to return from search results
 async function queryApi(query, numResults){
 
-  const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + apiKeys[4] + '&query=' + query + '&number=' + numResults);
+  const response = await fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=' + apiKeys[2] + '&query=' + query + '&number=' + numResults);
   
   return response.json();
   
@@ -67,7 +57,7 @@ async function queryApi(query, numResults){
 //Returns json data of recipe with id specified in parameter 'id'
 async function getRecipe(id){
   //Query API by specific recipe id
-  const response = await fetch('https://api.spoonacular.com/recipes/'+ id +'/information?apiKey=' + apiKeys[4]);
+  const response = await fetch('https://api.spoonacular.com/recipes/'+ id +'/information?apiKey=' + apiKeys[2]);
   
   //Return data in json format
   return response.json();
@@ -121,7 +111,7 @@ async function fetchRecipes() {
     });
 }
 
-
+let carouselNum = 0;
 //Create carousel, add to page
 async function addCarouselsToPage(searchQuery, numRecipes){
 
@@ -163,6 +153,7 @@ async function addCarouselsToPage(searchQuery, numRecipes){
 
   //Inserts all the recipe cards in carouselCards into the carousel
   newCarousel.createCardCarousel(carouselCards);
+  console.log(carouselCards.length);
 
 
 
@@ -171,10 +162,20 @@ async function addCarouselsToPage(searchQuery, numRecipes){
 
 
   //Appends the newly created and populated carousel to the class recipes-wrapper in the document
-  document.querySelector('.recipes-wrapper').appendChild(newCarousel);
+  document.querySelectorAll('.recipes-wrapper')[carouselNum].appendChild(newCarousel);
 
+  
+  document.querySelectorAll('.back')[carouselNum].addEventListener('click', () => {
+    newCarousel.prevCards();
+  });
+
+  document.querySelectorAll('.forward')[carouselNum].addEventListener('click', () => {
+    newCarousel.nextCards();
+  });
+
+  carouselNum++;
+  
   //Return a reference to the carousel
   return newCarousel;
-
 
 }
