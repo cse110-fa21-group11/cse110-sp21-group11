@@ -16,7 +16,7 @@
     },
     "directories": {
         "test": "__test__",
-        "src": "src"
+        "src": "source"
     },
     "scripts": {
         "cypress:open": "cypress open",
