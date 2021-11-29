@@ -3,6 +3,7 @@ const path = require("path");
 module.exports = {
     entry: {
         "main.js": [
+            path.resolve(__dirname, "main.js"),
             path.resolve(__dirname, "recipe card/cardCarousel.js"),
             path.resolve(__dirname, "recipecard/card.js"),
             path.resolve(__dirname, "recipecard/cardCarousel.js"),
