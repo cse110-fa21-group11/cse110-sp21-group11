@@ -4,14 +4,15 @@ module.exports = {
     entry: {
         "main.js": [
             path.resolve(__dirname, "main.js"),
-            path.resolve(__dirname, "recipe card/cardCarousel.js"),
+        ],
+        "recipecard.js": [
             path.resolve(__dirname, "recipecard/card.js"),
             path.resolve(__dirname, "recipecard/cardCarousel.js"),
-            path.resolve(__dirname, "recipecard/cardExpand.js")
+            path.resolve(__dirname, "recipecard/cardExpand.js"),
         ]
     },
     output: {
-        filename: "main.js",
+        filename: "[name]",
         path: path.resolve(__dirname, "../source/public")
     }
 };
