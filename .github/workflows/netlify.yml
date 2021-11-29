@@ -1,0 +1,14 @@
+name: 'deploy workflow'
+
+on:
+  [push]
+
+jobs:
+  deploy:
+    name: 'Deploy to Netlify'
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.gAAD_Qi3QQygAP-OsAIqXtaxHxHvVuCv_AdROIlLxEU }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          build_directory: "source"
