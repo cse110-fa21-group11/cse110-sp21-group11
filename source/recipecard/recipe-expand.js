@@ -6,15 +6,13 @@ class RecipeExpand extends HTMLElement {
 
 
     set data(cardData) {
+        // to reset the html
+        if(this.shadowRoot.querySelector('article')){
+            this.shadowRoot.querySelector('article').innerHTML = ``;
+        }
         this.json = cardData;
         const style = document.createElement('style');
         const article = document.createElement('article');
-        // reset html
-        this.shadowRoot.querySelector('article').innerHTML = `
-        <header>
-            
-        </main>
-      `;
         style.innerHTML = `
         article {
             background-color: white;
