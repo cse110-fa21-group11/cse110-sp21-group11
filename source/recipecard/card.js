@@ -151,15 +151,15 @@ class Card extends HTMLElement {
     time.innerText = cookTime + " Minutes"; //TEMP VAL;convert time from API into readable string
 
     //Recipe ingredients
-    var ingredientsList //TEMP VAL; Get list of ingredients, store here as plaintext
+    var ingredientsList = '';//TEMP VAL; Get list of ingredients, store here as plaintext
     for (let i = 0; i < cardData.nutrition.ingredients.length; i++) {
       ingredientsList += cardData.nutrition.ingredients[i].name;
       if (i != cardData.nutrition.ingredients.length - 1) ingredientsList += ", ";
     }
-
+    console.log(cardData);
     const ingredients = document.createElement('p');
     ingredients.classList.add('ingredients');
-    ingredients.innerText = ingredientsList.substring(0, 100) + " (...)"; //Abbreviates ingredients text on card
+    ingredients.innerText = ingredientsList + " (...)"; //Abbreviates ingredients text on card
 
 
     //Add elements to recipe card
