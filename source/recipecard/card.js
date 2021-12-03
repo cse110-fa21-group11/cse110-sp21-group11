@@ -113,7 +113,7 @@ class Card extends HTMLElement{
         const titleText = cardData.title;
         console.log("Recipe title: " + titleText);
 
-        const title = document.createElement('p');
+        const title = document.createElement("p");
         title.classList.add('title');
 
 
