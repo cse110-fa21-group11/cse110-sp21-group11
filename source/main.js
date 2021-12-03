@@ -16,7 +16,12 @@ const recipeData = [];
 //if page return 402 error, check if apikey run out of daily quota. change the current apikey in /service/api.js
 window.addEventListener('DOMContentLoaded', init);
 
-const router = new Router();
+const router = new Router(
+  function () {
+    document.querySelector('.section-recipes-expand').classList.add('hide');
+    document.querySelector('.section-recipes-display').classList.remove('hide');
+  }
+);
 async function init() {
   document.querySelector('.section-recipes-expand').classList.add('hide');
   const breakfast = createCarousel('breakfast');
@@ -131,6 +136,7 @@ function bindRecipeExpand(recipeCard, recipeExpand) {
 function bindEsc() {
   document.addEventListener('keydown', (e) => {
     if (e.key == 'Escape') {
-      router.navigate('home');}
+      router.navigate('home');
+    }
   })
 }
