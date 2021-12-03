@@ -62,5 +62,5 @@ customElements.define('card-carousel', CardCarousel);
 */
 const nextButton = document.querySelector('.forward'); // next 3 recipes
 const prevButton = document.querySelector('.back'); // last 3 recipes in previous slides
-nextButton.addEventListener('click', CardCarousel().nextCards());
+nextButton.addEventListener("click", CardCarousel().nextCards());
 prevButton.addEventListener('click', CardCarousel().prevCards());
