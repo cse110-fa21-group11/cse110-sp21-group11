@@ -202,4 +202,4 @@ class Card extends HTMLElement{
 
 
 
-customElements.define('recipe-card', Card);
+customElements.define("recipe-card", Card);
