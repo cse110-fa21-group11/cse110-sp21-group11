@@ -165,6 +165,6 @@ async function addCarouselsToPage(searchQuery, numRecipes){
   newCarousel.createCardCarousel(carouselCards);
 
   //Appends the newly created and populated carousel to the class recipes-wrapper in the document
-  document.querySelector('.recipes-wrapper').appendChild(newCarousel);
+  document.querySelector(".recipes-wrapper").appendChild(newCarousel);
 
 }
