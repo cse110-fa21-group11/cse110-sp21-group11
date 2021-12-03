@@ -33,7 +33,7 @@ class CardCarousel extends HTMLElement {
     nextCards() {
         const cards = this.querySelectorAll('recipe-card');
         for (let i = cards.length - 4; i >= 0; i--) {
-            if (!(cards[i].classList.contains('hidden'))) {
+            if (!(cards[i].classList.contains("hidden"))) {
                 cards[i].classList.add('hidden');
                 cards[i + 3].classList.remove('hidden');
             }
