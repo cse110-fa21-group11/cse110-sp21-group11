@@ -7,12 +7,15 @@ class RecipeExpand extends HTMLElement {
 
     set data(cardData) {
         // to reset the html
-        if(this.shadowRoot.querySelector('article')){
-            this.shadowRoot.querySelector('article').innerHTML = ``;
+        if (!cardData) return;
+        // clean up the expand page
+        if (this.shadowRoot.querySelector('article')) {
+            this.shadowRoot.querySelector('article').remove();
         }
         this.json = cardData;
         const style = document.createElement('style');
         const article = document.createElement('article');
+        this.shadowRoot.append(style, article);
         style.innerHTML = `
         article {
             background-color: white;
@@ -238,7 +241,6 @@ class RecipeExpand extends HTMLElement {
         // description.innerHTML = cardData.summary;
 
         article.appendChild(wrapper);
-        this.shadowRoot.append(style, article);
     }
     get data() {
         return this.json;
