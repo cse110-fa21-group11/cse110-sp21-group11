@@ -119,7 +119,7 @@ class Card extends HTMLElement{
 
         //Recipe Link
         const hyperLink = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"; //TEMP VAL; Temporary url to recipe
-        const link = document.createElement('a');
+        const link = document.createElement("a");
         link.setAttribute('href', hyperLink);
         link.innerText = titleText;
         title.appendChild(link);
