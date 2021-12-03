@@ -40,13 +40,12 @@ async function createCarousel(selector) {
     carousel.setAttribute('class', 'carousel');
     for (let i = 0; i < res.results.length; i++) {
       localRecipe[i] = res.results[i];
-      recipeData[res.results[i].title] = res.results[i].id
+      recipeData[res.results[i].title] = res.results[i].id;
       // create recipe card
       const recipeCard = document.createElement('recipe-card');
       recipeCard.data = res.results[i];
       bindRecipeExpand(recipeCard, function () {
         fetchById(recipeCard.data.id).then(function (res) {
-          console.log(res);
           document.querySelector('.section-recipes-expand').classList.remove('hide');
           document.querySelector('.section-recipes-display').classList.add('hide');
           document.querySelector('recipe-expand').data = res;
@@ -127,7 +126,7 @@ function bindShowLess(btn, carousel, localRecipe) {
 }
 
 function bindRecipeExpand(recipeCard, recipeExpand) {
-  router.setExpand(recipeCard.data.id, recipeExpand)
+  router.setExpand(recipeCard.data.id, recipeExpand);
   recipeCard.addEventListener('click', (e) => {
     router.navigate(recipeCard.data.id);
   })
@@ -135,7 +134,7 @@ function bindRecipeExpand(recipeCard, recipeExpand) {
 
 function bindEsc() {
   document.addEventListener('keydown', (e) => {
-    if (e.key == 'Escape') {
+    if (e.key == 'Escape') {    
       router.navigate('home');
     }
   })

@@ -6,10 +6,15 @@ class RecipeExpand extends HTMLElement {
 
 
     set data(cardData) {
-        console.log(cardData);
+        this.json = cardData;
         const style = document.createElement('style');
         const article = document.createElement('article');
-
+        // reset html
+        this.shadowRoot.querySelector('article').innerHTML = `
+        <header>
+            
+        </main>
+      `;
         style.innerHTML = `
         article {
             background-color: white;
@@ -124,7 +129,7 @@ class RecipeExpand extends HTMLElement {
         }
       `
         const wrapper = document.createElement('section');
-        wrapper.classList.add('wrapper-exp')
+        wrapper.classList.add('wrapper-exp');
         const title = document.createElement('h1');
         title.classList.add('title-exp');
         title.innerText = cardData.title
@@ -236,6 +241,9 @@ class RecipeExpand extends HTMLElement {
 
         article.appendChild(wrapper);
         this.shadowRoot.append(style, article);
+    }
+    get data() {
+        return this.json;
     }
 }
 customElements.define('recipe-expand', RecipeExpand);
