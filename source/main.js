@@ -26,7 +26,7 @@ async function init() {
       return;
     }
     */
-   let params = 'query=pasta&maxFat=25&nuber=2';
+   let params = "query=pasta&maxFat=25&nuber=2";
    await fetchParams(params).then(function(res){
     const fetchedRecipes = res.results;
     for (let i = 0; i < fetchedRecipes.length; i++) {
