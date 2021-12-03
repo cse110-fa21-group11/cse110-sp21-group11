@@ -13,6 +13,7 @@ const recipeData = [];
 //carousel buttons
 //var buttons = [document.querySelector('.forward'), document.querySelector('.back')];
 
+//if page return 402 error, check if apikey run out of daily quota. change the current apikey in /service/api.js
 window.addEventListener('DOMContentLoaded', init);
 
 const router = new Router();
