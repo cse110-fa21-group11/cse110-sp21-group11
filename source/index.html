@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="mainWebsite.css">
     <link rel="stylesheet" href="featured.css">
+    <link rel="stylesheet" href="navbar.css">
     <script src="https://use.fontawesome.com/71ef81c39b.js"></script>
     <script src="recipecard/recipe-expand.js" type="module"></script>
     <!-- each js file has a style element that will be used here when the expanded page is rendered-->
@@ -38,49 +39,54 @@
     <main>
         <header id="indexHeader">
             <section class="top-bar seen">
-                <nav>
-                     <!-- start nav bar -->
+                <nav id="top-nav">
                     <img src="images/logo.png" id="logo-img">
-                    <ul>
-                        <li> <a id="homePage"> Home </a></li>
-                        <li> <a id="recipes"> Recipes </a>
-                        <i class="fa fa-caret-down"></i>
-                        <!-- Recipes Dropdown -->
-                            <ul class="dropdown">
-                                <li><a id="breakfastPage"> Breakfast </a></li>
-                                <li><a id="lunchPage"> Lunch </a></li>
-                                <li><a id="dinnerPage"> Dinner </a></li>
-                                <li><a id="dessertPage"> Dessert </a></li>
-                            <!-- End Recipes Dropdown-->
-                            </ul>
-                <!-- End recipes nav-->
-                        </li>
-                        <li> <a href="https://spoonacular.com/articles/academy#Basics"> How-To's/Techniques </a>
-                        <i class="fa fa-caret-down"></i>
-                            <ul class="dropdown">
-                                <li><a href="https://spoonacular.com/academy/must-have-kitchen-utensils"> Needed Kitchen Utensils </a></li>
-                                <li><a href="https://spoonacular.com/academy/using-your-grill-or-oven"> Using Oven/Grill </a></li>
-                                <li><a href="https://spoonacular.com/articles/academy#Basics"> Cooking Techniques </a></li>
-                                <li><a href="https://spoonacular.com/academy/knife-techniques"> Cutting Techniques </a></li>
-                            <!-- End how-to's Dropdown-->
-                            </ul>
-                    <!-- end how-tos nav bar-->
-                    </li>
-                <!-- end nav bar -->
-                </ul>
-            </nav>
-            <div id="addWrapper">
-                <button type="button" id="addRecipeBtn" > Upload a Recipe </button>
-            </div>
-            <!-- He11's Kitchen title on nav bar -->
-                <p> He<span style="color: red">11</span>'s <span style="color: #f1dcb4">Kitchen </span></p>
-                <div class="search-box">
-                    <input type="text" placeholder=" Type here...." id = "topSearch"/>
-                    <label for="" id="icon">
-                        <i class="fa fa-search" aria-hidden="true" id = "topSearchButton"></i>
-                    </label>
-                </div>
-        <!-- end of top bar-->
+                    <p> He<span style="color: red">11</span>'s <span style="color: #f1dcb4">Kitchen </span></p>
+                    <a id="homePage"> Home </a>
+                    <!-- Recipes dropdown -->
+                    <div class="dropdown">
+                        <button class="dropdownBtn"> Recipes <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-display">
+                            <a id="breakfastPage"> Breakfast </a>
+                            <a id="lunchPage"> Lunch </a>
+                            <a id="dinnerPage"> Dinner </a>
+                            <a id="dessertPage"> Dessert </a>
+                        </div>
+                    </div>
+                    <!-- Techniques dropdown -->
+                    <div class="dropdown">
+                        <button class="dropdownBtn"> How-To's/Techniques <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-display">
+                            <a href="https://spoonacular.com/academy/must-have-kitchen-utensils"> Needed Kitchen Utensils </a>
+                            <a href="https://spoonacular.com/academy/using-your-grill-or-oven"> Using Oven/Grill </a>
+                            <a href="https://spoonacular.com/articles/academy#Basics"> Cooking Techniques </a>
+                            <a href="https://spoonacular.com/academy/knife-techniques"> Cutting Techniques </a>
+                        </div>
+                    </div>
+
+                    <div class="upload">
+                        <button class="uploadBtn" type="button" id="addRecipeBtn" > Upload a Recipe </button>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" placeholder=" Type here...." id = "topSearch"/>
+                        <label for="" id="search-icon">
+                            <i class="fa fa-search" aria-hidden="true" id = "topSearchButton"></i>
+                        </label>
+                    </div>
+                    <a class="expand-icon" onclick="setResponsiveness()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </nav>
+                <script>
+                    function setResponsiveness() {
+                    var nav = document.getElementById("top-nav");
+                        if (nav.className === "") {
+                            nav.className += "responsive";
+                        } else {
+                            nav.className = "";
+                        }
+                    }
+                </script>  
         </section>
 
             <section class="hero seen">
