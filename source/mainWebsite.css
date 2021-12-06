@@ -487,32 +487,30 @@ li a:hover {
   margin: auto;
 }
 
-/* the back and forward buttons */
-.back,
-.forward {
+.forward { 
   cursor: pointer;
-  position: absolute;
-  top: 48%;
   width: auto;
   height: 20px;
   margin-top: -23px;
   padding: 17px;
   border-radius: 50px;
-  color: black;
   font-size: 20px;
   overflow: hidden;
   transition: all 0.35s;
 }
 
+
 .back {
-  left: -15mm;
+  cursor: pointer;
+  width: auto;
+  height: 20px;
+  margin-top: -23px;
+  padding: 17px;
+  border-radius: 50px;
+  font-size: 20px;
+  overflow: hidden;
+  transition: all 0.35s;
 }
-
-/* place forward button to right of page */
-.forward {
-  right: -37mm;
-}
-
 /* button transition features */
 .back:hover,
 .forward:hover {
@@ -595,25 +593,6 @@ footer {
   cursor: pointer;
 }
 
-button.showMore {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  background-color: white;
-}
-
-button.showLess {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  background-color: white;
-}
 
 .carousel {
   display: flex;
