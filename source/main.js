@@ -736,6 +736,9 @@ function bindShowMore(btn, carousel, localRecipe, numRecipesInCarousel) {
       carousel.removeChild(carousel.querySelector('recipe-card'));
     }
     for (let i = 0; i < numRecipesInCarousel; i++) {
+      if (i + curPtr >= localRecipe.length) {
+        break;
+      }
       carousel.insertBefore(localRecipe[i+curPtr], btn);
     }
   })
@@ -761,10 +764,13 @@ function bindShowLess(btn, carousel, localRecipe, numRecipesInCarousel) {
     }
 
     for (let i = 0; i < numRecipesInCarousel; i++) {
+      if (carousel.querySelector('recipe-card') == null) {
+        break;
+      }
       carousel.removeChild(carousel.querySelector('recipe-card'));
     }
     for (let i = 0; i < numRecipesInCarousel; i++) {
-
+      console.log(localRecipe[i+curPtr])
       carousel.insertBefore(localRecipe[i+curPtr], carousel.querySelector('.forward'));
     } 
   })
