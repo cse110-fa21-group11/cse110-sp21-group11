@@ -482,12 +482,12 @@ li a:hover {
 
 /* the top recipe caraosuel */
 .recipes-wrapper {
-  max-width: 1000px;
+  max-width: 90%;
   position: relative;
   margin: auto;
 }
-
-/* the back and forward buttons */
+/*
+/* the back and forward buttons *
 .back,
 .forward {
   cursor: pointer;
@@ -508,12 +508,12 @@ li a:hover {
   left: -15mm;
 }
 
-/* place forward button to right of page */
+/* place forward button to right of page *
 .forward {
   right: -37mm;
 }
 
-/* button transition features */
+/* button transition features *
 .back:hover,
 .forward:hover {
   color: #df342f;
@@ -550,7 +550,7 @@ li a:hover {
 .forward:hover:after {
   top: 0;
 }
-
+*/
 footer {
   display: flex;
   background-color: #3b3838;

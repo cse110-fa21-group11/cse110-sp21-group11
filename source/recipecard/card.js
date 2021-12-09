@@ -14,12 +14,7 @@ class Card extends HTMLElement {
 
     //For now this is literally just card.css in its entirety
     cardStyle.innerHTML = `
-        .recipes-wrapper {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(12rem, 16rem));
-            grid-gap: 4.3rem;
-            justify-content: center;
-          }
+        
           article {
             display: flex;
             flex-direction: column;

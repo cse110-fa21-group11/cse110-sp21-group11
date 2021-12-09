@@ -534,17 +534,7 @@ async function addCarouselsToPage(searchQuery, numRecipes, title, diet) {
 
   //Binds the back and forward buttons to their respective carousel's functions
 
-  document
-    .querySelectorAll(".back")
-    [carouselNum].addEventListener("click", () => {
-      newCarousel.prevCards();
-    });
 
-  document
-    .querySelectorAll(".forward")
-    [carouselNum].addEventListener("click", () => {
-      newCarousel.nextCards();
-    });
 
   carouselNum++;
 
