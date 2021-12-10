@@ -114,7 +114,7 @@ class RecipeExpand extends HTMLElement {
         #editButton {
             background-color: #eee;
             height: 30px;
-            width: 135px;
+            width: 150px;
             font-size: 16px;
             align-items: center;
             margin-right: 8px;
@@ -124,7 +124,7 @@ class RecipeExpand extends HTMLElement {
         #deleteButton {
             background-color: #eee;
             height: 30px;
-            width: 135px;
+            width: 150px;
             font-size: 16px;;
             align-items: center;
             margin-right: 20px;
