@@ -224,6 +224,6 @@ function addRecipe() {
 
 function redirectToIndex() {
   deleteOldRecipe = false;
-  window.location.href = "/source/index.html";
+  window.location.href = "/index.html";
 }
 
