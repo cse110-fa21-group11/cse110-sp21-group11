@@ -532,10 +532,6 @@ async function addCarouselsToPage(searchQuery, numRecipes, title, diet) {
     .querySelectorAll(".recipes-wrapper")
     [carouselNum].appendChild(newCarousel);
 
-  //Binds the back and forward buttons to their respective carousel's functions
-
-
-
   carouselNum++;
 
   //Return a reference to the carousel
